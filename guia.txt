@@ -1,0 +1,42 @@
+
+
+
+
+Primer paso.
+El boton "Save Centroids" guarda los centroides en la base de datos indexedDB por lo general tarda un 20seg en guardar la información 
+
+Para revisar si se cargaron en la base de datos vaya la consola busque la pestaña aplication -> indexedDB -> centroides -> keyvaluepairs -> y actualice la pantalla
+
+Segundo paso. 
+El boton "Save Poligons" guarda los poligonos en la base de datos indexedDB por lo general tarda un 20seg en guardar la información 
+
+Para revisar si se cargaron en la base de datos vaya la consola busque la pestaña aplication -> indexedDB -> poligons -> keyvaluepairs -> y actualice la pantalla
+
+
+variables: en la pantalla hay varias variables para para la verificacion.
+1 se puede seleccionar si las distancias son en kilometros o millas.
+
+2 el  campo con numero 10 es la distancia para saber si un punto esta carca de los centroides.
+
+3 Logitude y Latitude: son las coordenadas del punto.
+
+4. Point radius . es el radio del punto para saber si existen poligonos cercanos al punto
+
+5. Circle Point es para crear puntos en el radio del punto para tener una mayor exactitud al saber que poligonos estan cerca.
+
+Tercer paso.
+ para verificar los centroides solo presione el boton verificar centroides. en la izquierda de la pantalla apareceran todos los centroides con sus fieldIds .
+
+ Cuarto paso.
+
+ para verificar que poligonos estan cerca, gracias al radio de punto solo es precionar el boton "verificar con DB poligonos"
+
+ en la parte centrar de la pantalla apareceran los poligonos cercanos al punto que tendra como titulo "nearby Polygons" y tambien verificara dentro de que poligono esta el punto. Al final de la lista del medio de la pantalla esta los datos del poligono dentro del cual se encuentra el punto que tiene como titulo "Inside Polygon"
+
+
+ La informacion que aparece al lado derecho de la pantalla el resumen es el siguiente:
+
+ Normal Poligons: Son poligonos que tienen una estructura normal dentro del json 
+ More than one polygon: Son los fieldIds que tiene mas de un poligono en su estructura
+ Strange Poligons: Son los que no tienen la estructura adecuada dentro del json esto se arregla poniendo las coordenadas dentro de []
+ Null polygons: son fieldIds que no tiene poligonos
